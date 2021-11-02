@@ -19,8 +19,8 @@ module.exports = {
         "light-slate": "#a8b2d1",
         "lighter-slate": "#ccd6f6",
         white: "#e6f1ff",
-        green: "#64ffda",
-        "green-tint": "rgba(100,255,218,0.1)",
+        primary: "#64ffda",
+        accent: "rgba(100,255,218,0.1)",
       },
       transitionTimingFunction: {
         easing: "cubic-bezier(0.645,0.045,0.355,1)",
