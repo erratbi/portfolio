@@ -7,7 +7,6 @@ export default function Home() {
       <Head>
         <title>Erratbi</title>
         <meta name="description" content="Here is my humble portfolio" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div id="main" className="pt-32">
