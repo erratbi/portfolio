@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
+import gsap from "gsap";
 import cn from "classnames";
 import Logo from "../../assets/logo.svg";
 import Menu from "./Menu";
@@ -28,6 +29,25 @@ function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
 
+  useEffect(() => {
+    gsap.from(gsap.utils.toArray(".menu-item"), {
+      x: 50,
+      opacity: 0,
+      duration: 1.2,
+      ease: "power4.out",
+      delay: 0.1,
+      stagger: 0.1,
+    });
+
+    gsap.from(".logo", {
+      scale: 0.5,
+      opacity: 0,
+      duration: 1,
+      delay: 0.5,
+      ease: "power4.out",
+    });
+  }, []);
+
   const handleClick = () => {
     setIsMenuVisible(!isMenuVisible);
     document.getElementById("content").classList.toggle("blur-sm");
@@ -46,7 +66,7 @@ function Header() {
           }
         )}
       >
-        <Logo className="h-12" />
+        <Logo className="logo h-12" />
         <Menu className="hidden lg:flex" isVisible={isMenuVisible} />
         <MenuToggle onClick={handleClick} />
       </div>

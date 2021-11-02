@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: "PT sans",
+        sans: "Inter",
         mono: "PT Mono",
       },
       colors: {

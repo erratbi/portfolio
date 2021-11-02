@@ -11,7 +11,7 @@ function OutlinedButton({ onClick, children, className }) {
   return (
     <button
       className={cn(
-        "border rounded-md px-8 py-2.5 text-primary border-primary hover:text-navy hover:bg-primary transition-colors",
+        "border rounded-sm px-8 py-2.5 text-primary border-primary hover:text-navy hover:bg-primary transition-colors",
         className
       )}
       onClick={onClick}

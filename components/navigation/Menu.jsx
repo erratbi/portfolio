@@ -33,7 +33,7 @@ function Menu({ isVisible, className }) {
         ))}
         <li>
           <OutlinedButton
-            className="lg:text-sm lg:px-5 font-sans"
+            className="menu-item lg:text-sm lg:px-5 font-sans"
             onClick={() => {}}
           >
             Mon CV
