@@ -1,13 +1,5 @@
-import "../styles/globals.scss";
-import { useEffect } from "react";
+import "styles/globals.scss";
 
-function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    const cloaked = document.querySelectorAll(".cloak");
-    cloaked.forEach((el) => el.classList.remove("cloak"));
-  }, []);
-
-  return <Component {...pageProps} />;
-}
+const MyApp = ({ Component, pageProps }) => <Component {...pageProps} />;
 
 export default MyApp;

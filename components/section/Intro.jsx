@@ -1,21 +1,28 @@
-import OutlinedButton from "../misc/OutlinedButton";
 import gsap from "gsap";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
+import OutlinedButton from "components/misc/OutlinedButton";
+import { useSplashContext } from "contexts/SplashContext";
+import { uncloak } from "utils";
 
 const Intro = () => {
+  const { splashAnimationEnded } = useSplashContext();
+
   useEffect(() => {
-    gsap.from(gsap.utils.toArray(".up-fade"), {
-      y: 50,
-      opacity: 0,
-      duration: 1,
-      ease: "power4.out",
-      stagger: 0.1,
-      delay: 1,
-    });
-  }, []);
+    if (splashAnimationEnded) {
+      uncloak("#intro");
+      gsap.from(gsap.utils.toArray(".up-fade"), {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: "power4.out",
+        stagger: 0.1,
+        delay: 1,
+      });
+    }
+  }, [splashAnimationEnded]);
 
   return (
-    <div className="h-screen flex items-center">
+    <div id="intro" className="h-screen flex items-center">
       <div>
         <h5 className="up-fade cloak font-mono text-primary hidden md:block mb-2 lg:text-lg">
           Salut, je suis

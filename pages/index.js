@@ -1,10 +1,13 @@
 import Head from "next/head";
 import Header from "components/navigation/Header";
 import Intro from "components/section/Intro";
+import Splash from "components/misc/Splash";
+import SplashContextProvider from "contexts/SplashContext";
 
 export default function Home() {
   return (
-    <>
+    <SplashContextProvider>
+      <Splash />
       <Head>
         <title>Erratbi</title>
         <meta name="description" content="Here is my humble portfolio" />
@@ -19,6 +22,6 @@ export default function Home() {
           <Intro />
         </div>
       </div>
-    </>
+    </SplashContextProvider>
   );
 }
