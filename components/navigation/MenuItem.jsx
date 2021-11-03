@@ -8,7 +8,7 @@ MenuItem.propTypes = {
 
 function MenuItem({ children, number, link }) {
   return (
-    <li className="menu-item text-lg lg:text-base">
+    <li className="cloak menu-item text-lg lg:text-base">
       <span className="block mb-1 text-primary text-base lg:inline-block lg:mb-0 lg:mr-1 lg:text-sm">
         0{number}.
       </span>

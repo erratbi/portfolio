@@ -3,10 +3,8 @@ import gsap from "gsap";
 import { useEffect, useRef } from "react";
 
 const Intro = () => {
-  const ref = useRef(null);
-
   useEffect(() => {
-    gsap.from(gsap.utils.toArray(".up-fade "), {
+    gsap.from(gsap.utils.toArray(".up-fade"), {
       y: 50,
       opacity: 0,
       duration: 1,
@@ -19,16 +17,16 @@ const Intro = () => {
   return (
     <div className="h-screen flex items-center">
       <div>
-        <h5 className="up-fade font-mono text-primary hidden md:block mb-2 lg:text-lg">
+        <h5 className="up-fade cloak font-mono text-primary hidden md:block mb-2 lg:text-lg">
           Salut, je suis
         </h5>
-        <h1 className="up-fade font-bold text-lighter-slate text-4xl mb-2 sm:text-5xl sm:mb-3 lg:text-7xl">
+        <h1 className="up-fade cloak font-bold text-lighter-slate text-4xl mb-2 sm:text-5xl sm:mb-3 lg:text-7xl">
           Erratbi Youssef
         </h1>
-        <h2 className="up-fade font-bold text-light-slate text-3xl mb-4 sm:text-5xl sm:mb-6 lg:text-6xl">
+        <h2 className="up-fade cloak font-bold text-light-slate text-3xl mb-4 sm:text-5xl sm:mb-6 lg:text-6xl">
           Développeur Fullstack
         </h2>
-        <p className="up-fade mt-4 leading-relaxed sm:text-lg lg:text-xl lg:max-w-xl">
+        <p className="up-fade cloak mt-4 leading-relaxed sm:text-lg lg:text-xl lg:max-w-xl">
           Créer des choses pour le{" "}
           <span className="text-primary underline">web</span> et le{" "}
           <span className="text-primary underline">mobile</span>, est ma
@@ -36,7 +34,7 @@ const Intro = () => {
           dans tous mes travaux. Actuellement, je travail comme{" "}
           <span className="text-primary underline">freelanceur</span>
         </p>
-        <OutlinedButton className="up-fade mt-12 px-12 py-5 w-full md:w-auto">
+        <OutlinedButton className="up-fade cloak mt-12 px-12 py-5 w-full md:w-auto">
           Découvrez mon travail
         </OutlinedButton>
       </div>

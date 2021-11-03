@@ -66,7 +66,7 @@ function Header() {
           }
         )}
       >
-        <Logo className="logo h-12" />
+        <Logo className="cloak logo h-12" />
         <Menu className="hidden lg:flex" isVisible={isMenuVisible} />
         <MenuToggle onClick={handleClick} />
       </div>
