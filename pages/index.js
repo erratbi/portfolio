@@ -1,8 +1,9 @@
-import Head from "next/head";
-import Header from "components/navigation/Header";
-import Intro from "components/section/Intro";
-import Splash from "components/misc/Splash";
-import SplashContextProvider from "contexts/SplashContext";
+import Head from 'next/head';
+import Header from 'components/navigation/Header';
+import Intro from 'components/section/Intro';
+import Splash from 'components/misc/Splash';
+import SplashContextProvider from 'contexts/SplashContext';
+import About from 'components/section/About';
 
 export default function Home() {
   return (
@@ -15,11 +16,9 @@ export default function Home() {
 
       <div id="main">
         <Header />
-        <div
-          id="content"
-          className="lg:blur-none transition px-5 lg:max-w-4xl xl:max-w-5xl mx-auto"
-        >
-          <Intro />
+        <div id="content" className="lg:blur-none transition px-5 lg:max-w-4xl xl:max-w-5xl mx-auto mt-36">
+          <About />
+          {/*<Intro />*/}
         </div>
       </div>
     </SplashContextProvider>
