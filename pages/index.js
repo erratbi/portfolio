@@ -16,9 +16,9 @@ export default function Home() {
 
       <div id="main">
         <Header />
-        <div id="content" className="lg:blur-none transition px-5 lg:max-w-4xl xl:max-w-5xl mx-auto mt-36">
-          <About />
-          {/*<Intro />*/}
+        <div id="content" className="lg:blur-none transition px-5 lg:max-w-4xl xl:max-w-5xl mx-auto">
+          <Intro />
+          <About className="mt-20 mb-20" />
         </div>
       </div>
     </SplashContextProvider>

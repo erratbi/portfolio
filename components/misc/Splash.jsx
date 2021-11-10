@@ -1,42 +1,39 @@
-import gsap from "gsap";
-import { useEffect } from "react";
-import { useSplashContext } from "contexts/SplashContext";
-import { uncloak } from "utils";
+import gsap from 'gsap';
+import { useEffect } from 'react';
+import { useSplashContext } from 'contexts/SplashContext';
+import { uncloak } from 'utils';
 
 function Splash() {
   const { onSplashAnimationEnded } = useSplashContext();
 
   useEffect(() => {
-    uncloak("#splash");
+    uncloak('#splash');
 
     gsap
       .timeline({
         onComplete: onSplashAnimationEnded,
       })
-      .from("#hexagon", {
+      .from('#hexagon', {
         strokeDashoffset: 1790,
         delay: 0.5,
-        duration: 4,
-        ease: "power2.in",
+        duration: 2.5,
+        ease: 'power2.in',
       })
-      .from("#letter", {
+      .from('#letter', {
         opacity: 0,
         duration: 1.2,
       })
-      .to("#splash-logo", {
+      .to('#splash-logo', {
         scale: 0,
         duration: 0.8,
         opacity: 0,
-        ease: "power4.out",
+        ease: 'power4.out',
       })
-      .to("#splash", { opacity: 0, duration: 0.6, delay: -0.4 })
-      .set("#splash", { display: "none" });
-  }, []);
+      .to('#splash', { opacity: 0, duration: 0.6, delay: -0.4 })
+      .set('#splash', { display: 'none' });
+  }, [onSplashAnimationEnded]);
   return (
-    <div
-      id="splash"
-      className="flex justify-center items-center bg-dark-navy fixed inset-0 z-40"
-    >
+    <div id="splash" className="flex justify-center items-center bg-dark-navy fixed inset-0 z-40">
       <svg
         id="splash-logo"
         className="cloak h-24 text-primary"
